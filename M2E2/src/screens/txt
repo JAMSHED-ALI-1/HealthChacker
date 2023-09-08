@@ -1,0 +1,108 @@
+import React from 'react';
+import {View, Text, ImageBackground, StyleSheet, StatusBar,TouchableOpacity} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { TextInput } from 'react-native-paper';
+const hockyman = require('../assets/images/HockyMan.png');
+const Bike99 = require('../assets/images/Bike99.png');
+import {SIZES,colors} from '../'
+
+const Login = () => {
+  return (
+    <View style={styles.container}>
+      <StatusBar backgroundColor={'#081016'} />
+      <LinearGradient
+        style={styles.gradient}
+        colors={['#01010d', '#02a102', '#010212', '#010212']}
+        start={{x: -1, y: 6.4}}
+        end={{x: 9.2, y: 0.1}}>
+        <ImageBackground
+          source={hockyman}
+          resizeMode="contain" // Change this to 'contain' or 'cover'
+          style={styles.imageBackground}
+        />
+        <View style={{bottom:"30%",width:'90%',alignSelf:'center'}}>
+          <View style={{justifyContent:'space-between'}}>
+            <Text>Login</Text>
+            <View>
+            <ImageBackground
+              source={Bike99}
+              resizeMode="contain"
+              style={{
+                alignSelf: 'center',
+                width: '140%',
+                 height: 60,
+        
+              
+              }}
+            />
+            </View>
+          </View>
+          <View style={{}}>
+            <Text>Email</Text>
+            <TextInput
+              mode="outlined"
+              placeholder="Enter Email Address"
+              left={<TextInput.Icon icon="eye" />}
+            />
+            <Text>Password</Text>
+            <TextInput
+              mode="outlined"
+              placeholder="Enter Email Address"
+              left={<TextInput.Icon icon="eye" />}
+            />
+          </View>
+          <Text>Forget Your Password</Text>
+          <TouchableOpacity>
+            <Text>LOGIN</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text>Register</Text>
+          </TouchableOpacity>
+          <View></View>
+        </View>
+      </LinearGradient>
+    </View>
+  );
+};
+
+export default Login;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  gradient: {
+    flex: 1,
+  },
+  imageBackground: {
+    resizeMode: 'contain',
+    width: 320.654,
+    height: 546,
+     flexDirection:'row',
+  
+    // backgroundColor: 'transparent',
+  },
+  textContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import LinearGradient from 'react-native-linear-gradient';
+
+const Login = () => {
+  return (
+    <LinearGradient
+      colors={['#080E18', '#1EB808', '#080E19', '#080E16','#080E18']}
+      style={{height: '100%'}}
+      start={{x: 0.5, y: 0.8}}
+      end={{x: 9, y: -12}}></LinearGradient>
+  );
+};
+
+export default Login;
+
+const styles = StyleSheet.create({});
